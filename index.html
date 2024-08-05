@@ -1,0 +1,147 @@
+<!--
+Ein index.html File ist die 'Hauptseite' einer Webseite. Es wäre zum Beispiel die Webseite die angezeigt wird, wenn man
+den Link https://google.com öffnet.
+-->
+
+<!DOCTYPE html>
+
+<!--
+Das ist ein sogenanntes 'Tag' ein Tag muss immer einen Namen haben (in diesem fall 'html').
+Ein Tag kann ein oder mehrere Tags oder Texte beinhalten. Diese Tags sind die Baublöcke einer HTML-Datei und werden
+verwendet, um die Struktur der Webseite zu erstellen.
+
+Jedes Tag hat ein Start Tag und ein End Tag
+Start Tag                   End Tag
+    ↓                          ↓
+   <p>Hallo Mein Name ist ...</p>
+
+Wenn ein Entwickler zum Beispiel den Text "Hallo Mein Name ist ..." zu einer Webseite hinzufügen will.
+Würde er ein <p> Tag verwenden. Bei dem er den vorher genannten Text zwischen den Start und End Tags hinzufügen würde
+
+<p>Hallo Mein Name ist ...</p>
+
+Ein geöffnetes Tag muss immer geschlossen werden!
+
+In diesem Fall wird das <html> Tag am Schluss der index.html Datei geschlossen.
+Ein Tag kann geschlossen werden, indem man ein Backslash "\" vor dem Tag namen einfügt.
+In diesem Fall wäre es <\html>
+-->
+<html lang="en">
+
+<!--
+Ein <head> Tag beinhaltet Metadaten der Website wie zum Beispiel den Titel der im Browser Angezeigt wird oder die
+Beschreibung einer Webseite
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TODO: Füge deinen Firmennamen hier hinzu -->
+    <title>Meine Firma</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<!--
+Ein <body> Tag beinhaltet die Struktur der Webseite, hier kann man zum beispiel mit einem <p> Tag ein Text hinzufügen.
+
+Hier sind ein Paar wichtige Tags
+- <h1>          Der Haupt Titel einer Seite, jede Seite soll nur einer diesen Tags beinhalten
+- <h2>          Ein Untertitel welcher anstatt <h1> für wichtige Texte verwendet werden soll
+- <h3> bis <h6> Weitere Untertitel
+- <img>         Ein Bild, hier kann man Lokale Bilder mit einem Dateipfad oder Externe Bilder mit einem Link anzeigen
+- <section>     Ein Tag welches als gruppierung von zusammengehörenden Elementen dient.
+                z.B. für einen Kommentar welches ein <p> Tag für den Inhalt und ein <img> Tag für das Profilbild des Users hat.
+                Jedes <section> Tag soll zusätzlich eines der Titel Tags als Element vorweisen.
+- <div>         Etwa das gleiche wie eine <section> jedoch ist der Inhalt nicht so strikt vorgegeben
+
+Mehr Informationen: https://www.w3schools.com/TAGS/default.asp
+-->
+<body>
+<header>
+    <!-- TODO: Heisse den User mit einem kurzen Text willkommen -->
+    <h1>Willkommen zu meiner Firmen Webseite</h1>
+    <p>Slogan</p>
+</header>
+
+<!--
+Mit einer einzigartigen id kann man dieses Element in anderen CSS und Javascript Files referenzieren damit man z.B.
+die Hintergrundfarbe ändern kann
+-->
+<section id="product">
+    <!-- TODO: Füge hier dein eigenes Produkt mit einer kurzen beschreibung und einem Bild hinzu -->
+    <h2>Mein Produkt</h2>
+    <p>Das neue Weltweit beste Produkt!</p>
+    <!-- Du kannst auf Google den Link eines Bildes kopieren und hier einfügen -->
+    <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/streams/2012/March/120309/166787-120309-vintage-computer-145p-1.jpg"
+         alt="Mein Produkt">
+</section>
+
+<section id="benefits">
+    <h2>Vorteile</h2>
+    <!-- TODO: Füge hier die Vorteile deines Produktes ein -->
+    <ul>
+        <li>Super Produkt</li>
+        <li>Spart deine Zeit</li>
+    </ul>
+</section>
+
+<section id="how-it-works">
+    <h2>Wie funktioniert es?</h2>
+    <!-- Beschreibe hier wie dein Produkt funktioniert -->
+    <p>So funktioniert mein Produkt!</p>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGVjzpY8LeXyzIQh0o4x6egu1abWTX-CqwsGmoNV9yA12a8ZkSxFKXHYepySO8KFVhy6c&usqp=CAU"
+         alt="Solar Charging Diagram">
+</section>
+
+<section id="testimonials">
+    <h2>Bewertungen von Kunden</h2>
+    <div id="testimonial-container">
+        <!--
+        Eine class ist ähnlich wie eine id. Sie ist jedoch nicht einzigartig und kann für mehrere Elemente verwendet werden
+        -->
+        <div class="testimonial">
+            <p>"Product&trade; hat einen grossen Unterschied in meinem Leben gemacht!"</p>
+            <p class="customer-name">John Doe</p>
+        </div>
+        <div class="testimonial">
+            <p>"Product&trade; ist sehr gut. Ich liebe es!"</p>
+            <p class="customer-name">Jane Doe</p>
+        </div>
+    </div>
+
+    <div>
+        <p>Gib uns deine Bewertung!</p>
+        <form id="testimonial-create">
+            <label>
+                Bewertung
+                <input name="testimonial"/>
+            </label>
+            <label>
+                Dein Name
+                <input name="your-name"/>
+            </label>
+            <button>Erstellen</button>
+        </form>
+    </div>
+</section>
+
+<section id="pricing">
+    <h2>Preise</h2>
+    <p>Krieg dein Product&trade; heute! Nur für 99$</p>
+    <a href="purchase.html" class="cta-button">Jetzt Kaufen</a>
+</section>
+
+<section id="contact">
+    <h2>Kontaktiere Uns</h2>
+    <p>Falls Sie Fragen haben können Sie uns ohne zu Zögern kontaktieren</p>
+    <p>Email: info@ecoglow.com</p>
+    <p>Mobile: 123-456-7890</p>
+</section>
+
+<footer>
+    <p>&copy; 2023 Product. All rights reserved.</p>
+</footer>
+</body>
+
+<script src="index.js"></script>
+
+</html>

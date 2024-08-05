@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaufe Product&trade;</title>
+    <link rel="stylesheet" href="purchase.css">
+</head>
+<body>
+    <header>
+        <a id="go-back" href="index.html" class="cta-button">Zurück</a>
+        <h1>Kaufe Product&trade;</h1>
+    </header>
+
+    <section id="product">
+        <h2>Product&trade;</h2>
+        <p>$99!</p>
+    </section>
+
+    <section id="purchase-form">
+        <h2>Jetzt Bestellen</h2>
+        <form>
+            <label for="quantity">Anzahl:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+            <br>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="address">Lieferungsadresse:</label>
+            <textarea id="address" name="address" required></textarea>
+            <br>
+            <button type="button" id="purchase-button" class="cta-button">Kauf Bestätigen</button>
+        </form>
+    </section>
+
+    <section id="purchase-receipt">
+        <h2>Quittung</h2>
+        <div id="receipt-text"></div>
+    </section>
+
+    <script src="purchase.js"></script>
+</body>
+</html>
